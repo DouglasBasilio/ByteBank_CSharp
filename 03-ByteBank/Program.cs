@@ -17,6 +17,10 @@ namespace _03_ByteBank
             c1.Sacar(50);
 
             Console.WriteLine("Saldo após saque: " + c1.saldo);
+
+            c1.Depositar(500);
+            Console.WriteLine("Saldo após depósito: " + c1.saldo);
+
             Console.ReadLine();
         }
     }
