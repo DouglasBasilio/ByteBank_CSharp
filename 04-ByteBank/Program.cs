@@ -10,22 +10,28 @@ namespace _04_ByteBank
     {
         static void Main(string[] args)
         {
-            Cliente douglas = new Cliente();
+            //Cliente douglas = new Cliente();
 
-            douglas.nome = "Douglas";
-            douglas.profissao = "Desenvolvedor C#";
-            douglas.cpf = "111.111.111-20";
+            //douglas.nome = "Douglas";
+            //douglas.profissao = "Desenvolvedor C#";
+            //douglas.cpf = "111.111.111-20";
 
             ContaCorrente conta = new ContaCorrente();
 
-            conta.titular = douglas;
+            //conta.titular = douglas;
+            conta.titular = new Cliente();
+            conta.titular.nome = "Douglas Basilio";
+            conta.titular.cpf = "111.111.111-20";
+            conta.titular.profissao = "Desenvolvedor C#";
+
             conta.saldo = 500;
             conta.agencia = 563;
-            conta.numero = 5634527;
+            conta.numero = 5634527;            
 
-            conta.titular.nome = "Douglas Basilio";
-
+            //Console.WriteLine(douglas.nome);
             Console.WriteLine(conta.titular.nome);
+            Console.WriteLine(conta.titular.cpf);
+            Console.WriteLine(conta.titular.profissao);
 
             Console.ReadLine();
         }
