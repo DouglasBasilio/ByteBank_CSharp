@@ -4,6 +4,8 @@
     {
         public Cliente Titular { get; set; }
 
+        public static int TotalDeContasCriadas { get; private set; } //propriedade que pertence a classe, ela é estática
+
         private int _agencia;
         public int Agencia { 
             get 
@@ -44,6 +46,7 @@
         {
             Agencia = agencia;
             Numero = numero;
+            TotalDeContasCriadas++; //sempre que o construtor for chamado, essa linha será executada
         }
 
         public bool Sacar(double valor)
